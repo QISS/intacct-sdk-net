@@ -40,7 +40,4 @@
       <PackagePath />
     </None>
   </ItemGroup>
-  <Target Name="PostPackNugetDeploy" AfterTargets="Pack" Condition="'$(Configuration)' == 'Release'">
-    <Exec Command="dotnet nuget push &quot;$(BaseOutputPath)$(Configuration)\$(PackageId).$(PackageVersion).nupkg&quot; -s &quot;C:\claimpilot\other\TempSolutions\Packages&quot;" />
-  </Target>
 </Project>
